@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'Dockerfile'
+      - 'poetry.lock'
 jobs:
   docker:
     runs-on: ubuntu-latest
