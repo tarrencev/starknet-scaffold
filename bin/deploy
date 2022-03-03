@@ -1,0 +1,22 @@
+#!/bin/bash
+set -eu
+# From: https://github.com/dopedao/RYO/blob/main/bin/deploy
+
+# For a network_type=localhost node open a new shell and run:
+# `nile node`
+
+# options: localhost, goerli, mainnet
+network_type=$1
+
+# Wipe old deployment record if it exists.
+rm $(network $network_type).deployments.txt || echo 'Will create one...'
+
+# Searches for a keyword, then fetches the address from that line.
+get_address () {
+    echo $(grep $1 $(network $network_type).deployments.txt | \
+        grep -o -m 1 '\b0x\w*')
+}
+
+# Deploy a contract
+Contract=$(nile deploy Contract \
+    --alias Contract --network $network_type)

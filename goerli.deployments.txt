@@ -1,0 +1,1 @@
+0x056fad7df71e4ffe80149cd788bb69bd0f8511f4e9be5bd9032b52ff07c197a9:artifacts/abis/Contract.json:Contract

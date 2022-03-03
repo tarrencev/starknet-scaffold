@@ -1,0 +1,42 @@
+# starknet-scaffold
+
+Scaffold a starknet cairo project.
+
+Includes:
+- Python virtual env with poetry
+- Containerized runtime w/ `nile` + `cairo`
+- Cached test fixtures + cache buster
+- Github Actions for testing
+- VSCode devcontainer
+
+# Usage
+
+## Compile
+
+```sh
+bin/compile
+```
+
+Compile project contracts using `nile`
+
+## Test 
+
+```sh
+bin/test
+```
+
+Run the project test suite. Tests will utilize a cached base deployment defined at `test/conftest.py:build_cache`. Updates to the `conftest.py` file will automatically trigger a contract rebuild.
+
+See example test at:
+
+`test/Contract_test.py`
+
+New tests require a new entry in `bin/test`.
+
+## Deploy
+
+```sh
+bin/deploy
+```
+
+Deploy a projects contracts. Create a `*.deployments.txt` file to track deployment addresses.
