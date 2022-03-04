@@ -40,3 +40,10 @@ bin/deploy
 ```
 
 Deploy a projects contracts. Create a `*.deployments.txt` file to track deployment addresses.
+
+## Development
+
+If you are using VSCode, we provide a development container with all required dependencies.
+When opening VS Code, it should ask you to re-open the project in a container, if it finds
+the .devcontainer folder. If not, you can open the Command Palette (`cmd + shift + p`),
+and run “Remote-Containers: Reopen in Container”.
