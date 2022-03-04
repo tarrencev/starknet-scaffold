@@ -12,6 +12,8 @@ jobs:
     container: ghcr.io/tarrencev/starknet-scaffold:latest
     steps:
       - uses: actions/checkout@v2
+      - name: install
+        run: poetry install
       - name: compile
         run: bin/compile
       - name: test
