@@ -3,8 +3,8 @@
 Scaffold a starknet cairo project.
 
 Includes:
-- Python virtual env with poetry
-- Containerized runtime w/ `nile` + `cairo`
+- Python virtual env with [poetry](https://github.com/python-poetry/poetry)
+- Containerized runtime w/ [`nile`](https://github.com/OpenZeppelin/nile) + [`cairo`](https://github.com/starkware-libs/cairo-lang)
 - Cached test fixtures + cache buster
 - Github Actions for testing
 - VSCode devcontainer
